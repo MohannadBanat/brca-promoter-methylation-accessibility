@@ -1,10 +1,16 @@
 # Promoter Chromatin Accessibility Outperforms Promoter DNA Methylation in Explaining Gene Expression in Primary Breast Tumours
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24293231.svg)](https://doi.org/10.5281/zenodo.24293231)
+
 Code, analysis plan and results for:
 
 > Abu Owida, H.; Alsarhan, A.; Banat, M.; Al-Fraihat, D.; Algarni, A. Promoter Chromatin Accessibility Outperforms Promoter DNA Methylation in Explaining Gene Expression in Primary Breast Tumours: An Integrative Multi-Omic Analysis of TCGA Data. Submitted to *International Journal of Molecular Sciences* (2026).
 
 **Study type:** secondary, observational, integrative multi-omic analysis of public TCGA data. No new samples were collected.
+
+## Archived version
+
+Version 1.0.0 (the code as submitted) is archived on Zenodo: https://doi.org/10.5281/zenodo.24293231. The DOI 10.5281/zenodo.24293230 always resolves to the latest version.
 
 ## What the analysis does
 
