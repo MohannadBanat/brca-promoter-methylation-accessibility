@@ -1,7 +1,8 @@
 {
-  "title": "Promoter Chromatin Accessibility Outperforms Promoter DNA Methylation in Explaining Gene Expression in Primary Breast Tumours: An Integrative Multi-Omic Analysis of TCGA Data (code, analysis plan and results)",
+  "title": "Promoter Chromatin Accessibility Outperforms Promoter DNA Methylation in Explaining Gene Expression in Primary Breast Tumors: An Integrative Multi-Omic Analysis of TCGA Data (code, analysis plan and results)",
   "upload_type": "software",
-  "description": "Analysis code, internal analysis plan (committed 2026-11-16, SHA-256 b2b7079a364df1e80b5e9c5c0c46947204045ea7e401b5e1b1391ce3e8b48d2d), timed deviations log, numerical results and figures for a secondary, integrative multi-omic analysis of 73 TCGA primary breast tumours with matched ATAC-seq, DNA methylation and RNA-seq. The analysis compares promoter chromatin accessibility and promoter DNA methylation as explanations of cross-tumour gene expression. All input data are public and are downloaded by the included script; raw data are not redistributed.",
+  "version": "1.0.1",
+  "description": "Analysis code, internal analysis plan (committed 2026-11-16, SHA-256 b2b7079a364df1e80b5e9c5c0c46947204045ea7e401b5e1b1391ce3e8b48d2d), timed deviations log, numerical results and figures for a secondary, integrative multi-omic analysis of 73 TCGA primary breast tumors with matched ATAC-seq, DNA methylation and RNA-seq. The analysis compares promoter chromatin accessibility and promoter DNA methylation as explanations of cross-tumor gene expression. All input data are public and are downloaded by the included script; raw data are not redistributed.",
   "creators": [
     {"name": "Abu Owida, Hamza", "affiliation": "Department of Medical Engineering, Faculty of Engineering, Al-Ahliyya Amman University, Amman 19328, Jordan", "orcid": "0000-0001-6943-6134"},
     {"name": "Alsarhan, Ayoub", "affiliation": "Department of Information Technology, Faculty of Prince Al-Hussien bin Abdullah, The Hashemite University, Zarqa 13133, Jordan"},

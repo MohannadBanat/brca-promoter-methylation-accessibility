@@ -22,12 +22,12 @@ bins = np.linspace(-1, 1, 41)
 for lab, m, col in [('CpG island', h1.HCP == True, C['HCP']), ('Non-island', h1.HCP != True, C['LCP'])]:
     ax[0].hist(h1.rho[m], bins=bins, alpha=.55, label=f'{lab} (n = {int(m.sum())})', color=col)
 ax[0].axvline(-0.3, ls='--', c='k', lw=.7)
-ax[0].set_xlabel('Spearman ρ across tumours\n(promoter methylation vs promoter accessibility)'); ax[0].set_ylabel('Genes')
+ax[0].set_xlabel('Spearman ρ across tumors\n(promoter methylation vs promoter accessibility)'); ax[0].set_ylabel('Genes')
 ax[0].legend(frameon=False, loc='upper right', handlelength=1.2, borderaxespad=0.1, title='Promoters', title_fontsize=6.5, alignment='left'); ax[0].set_xlim(-1, 1); ax[0].set_ylim(0, 190); tag(ax[0], 'A')
 H = res['H1']; vals = [H['methylated_yet_accessible'], H['unmethylated_yet_closed']]
 ax[1].bar([0, 1], [v / H['pairs'] * 100 for v in vals], color=[C['M'], C['A']], width=.6)
 ax[1].set_xticks([0, 1], ['Methylated\n(β ≥ 0.6),\nopen', 'Unmethylated\n(β ≤ 0.2),\nclosed'], fontsize=7)
-ax[1].set_ylabel('% of gene–tumour pairs'); tag(ax[1], 'B')
+ax[1].set_ylabel('% of gene–tumor pairs'); tag(ax[1], 'B')
 for i, v in enumerate(vals): ax[1].text(i, v / H['pairs'] * 100 + 0.2, f'{v:,}', ha='center', va='bottom', fontsize=7)
 fig.tight_layout(); save(fig, 'Figure1')
 
@@ -65,7 +65,7 @@ t = json.load(open(f'{R}/H3_both_measures_table.json'))
 fig, ax = plt.subplots(1, 2, figsize=(5.43, 2.9), sharey=True)
 cats = ['methylation', 'both', 'accessibility', 'neither']; cols = [C['M'], C['MA'], C['A'], C['grey']]
 names = {'methylation': 'Methylation only', 'both': 'Both', 'accessibility': 'Accessibility only', 'neither': 'Neither'}
-for a, key, ttl, hk in [(ax[0], 'all', 'All tumours', 'H3_all'), (ax[1], 'HM450', 'HM450 tumours only', 'H3_HM450_only')]:
+for a, key, ttl, hk in [(ax[0], 'all', 'All tumors', 'H3_all'), (ax[1], 'HM450', 'HM450 tumors only', 'H3_HM450_only')]:
     for i, grp in enumerate(['basal_silenced', 'luminal_silenced']):
         g = t[key][grp]; bottom = 0
         for c, col in zip(cats, cols):

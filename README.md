@@ -1,24 +1,26 @@
-# Promoter Chromatin Accessibility Outperforms Promoter DNA Methylation in Explaining Gene Expression in Primary Breast Tumours
+# Promoter Chromatin Accessibility Outperforms Promoter DNA Methylation in Explaining Gene Expression in Primary Breast Tumors
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24293231.svg)](https://doi.org/10.5281/zenodo.24293231)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24293230.svg)](https://doi.org/10.5281/zenodo.24293230)
 
 Code, analysis plan and results for:
 
-> Abu Owida, H.; Alsarhan, A.; Banat, M.; Al-Fraihat, D.; Algarni, A. Promoter Chromatin Accessibility Outperforms Promoter DNA Methylation in Explaining Gene Expression in Primary Breast Tumours: An Integrative Multi-Omic Analysis of TCGA Data. Submitted to *International Journal of Molecular Sciences* (2026).
+> Abu Owida, H.; Alsarhan, A.; Banat, M.; Al-Fraihat, D.; Algarni, A. Promoter Chromatin Accessibility Outperforms Promoter DNA Methylation in Explaining Gene Expression in Primary Breast Tumors: An Integrative Multi-Omic Analysis of TCGA Data. Submitted to *International Journal of Molecular Sciences* (2026).
 
 **Study type:** secondary, observational, integrative multi-omic analysis of public TCGA data. No new samples were collected.
 
 ## Archived version
 
-Version 1.0.0 (the code as submitted) is archived on Zenodo: https://doi.org/10.5281/zenodo.24293231. The DOI 10.5281/zenodo.24293230 always resolves to the latest version.
+Version 1.0.1 is archived on Zenodo (DOI added below once minted). It differs from version 1.0.0 (https://doi.org/10.5281/zenodo.24293231) only in American English spelling and in figure sizes, which now fit the IJMS template text column; the analysis code, data and numerical results are unchanged. The DOI 10.5281/zenodo.24293230 always resolves to the latest version.
+
+The internal analysis plan and deviations log in `plan/` keep their original British spelling, because editing them would change their recorded SHA-256 hashes.
 
 ## What the analysis does
 
-For 73 primary breast tumours with matched ATAC-seq (Corces et al. 2018), DNA methylation (HM450 or HM27) and RNA-seq, it asks:
+For 73 primary breast tumors with matched ATAC-seq (Corces et al. 2018), DNA methylation (HM450 or HM27) and RNA-seq, it asks:
 
-1. **H1:** how closely do promoter methylation and promoter accessibility track each other across tumours?
-2. **H2:** how much cross-tumour expression variance does each explain, alone and together? Measured as leave-one-out cross-validated R² per gene.
-3. **H3:** do genes expressed at lower levels in Basal than in luminal tumours show promoter hypermethylation, reduced accessibility, both or neither?
+1. **H1:** how closely do promoter methylation and promoter accessibility track each other across tumors?
+2. **H2:** how much cross-tumor expression variance does each explain, alone and together? Measured as leave-one-out cross-validated R² per gene.
+3. **H3:** do genes expressed at lower levels in Basal than in luminal tumors show promoter hypermethylation, reduced accessibility, both or neither?
 
 ## Analysis plan and deviations
 
@@ -57,15 +59,15 @@ Tested with Python 3.13.18, NumPy 2.5.3, pandas 3.0.5, SciPy 1.18.1, statsmodels
 
 All inputs are public, and the download script fetches them directly from these sources:
 
-- **ATAC-seq:** breast-cancer peak calls, normalised counts and sequencing statistics, from the [GDC ATACseq-AWG publication page](https://gdc.cancer.gov/about-data/publications/ATACseq-AWG) (Corces et al., *Science* 2018).
-- **DNA methylation:** GDC harmonised SeSAMe level-3 beta values (HM450 and HM27), one primary-tumour file per case; the file IDs are in `data/gdc_methylation_all74_manifest.tsv`.
+- **ATAC-seq:** breast-cancer peak calls, normalized counts and sequencing statistics, from the [GDC ATACseq-AWG publication page](https://gdc.cancer.gov/about-data/publications/ATACseq-AWG) (Corces et al., *Science* 2018).
+- **DNA methylation:** GDC harmonized SeSAMe level-3 beta values (HM450 and HM27), one primary-tumor file per case; the file IDs are in `data/gdc_methylation_all74_manifest.tsv`.
 - **RNA-seq and PAM50:** the UCSC Xena TCGA BRCA hub.
-- **Tumour purity:** ABSOLUTE estimates from the TCGA PanCancer Atlas.
+- **Tumor purity:** ABSOLUTE estimates from the TCGA PanCancer Atlas.
 - **Annotation:** Zhou lab HM450/HM27 GENCODE v36 manifests, and GENCODE v36 basic annotation.
 
 ## Main results
 
-Pooled across 73 tumours, adjusted for array platform; 95% CIs from a delete-one-tumour jackknife:
+Pooled across 73 tumors, adjusted for array platform; 95% CIs from a delete-one-tumor jackknife:
 
 | | Median per-gene CV-R² (1193 genes) |
 |---|---|
