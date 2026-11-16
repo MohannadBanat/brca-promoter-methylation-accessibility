@@ -10,7 +10,7 @@ Code, analysis plan and results for:
 
 ## Archived version
 
-Version 1.0.1 is archived on Zenodo (DOI added below once minted). It differs from version 1.0.0 (https://doi.org/10.5281/zenodo.24293231) only in American English spelling and in figure sizes, which now fit the IJMS template text column; the analysis code, data and numerical results are unchanged. The DOI 10.5281/zenodo.24293230 always resolves to the latest version.
+Version 1.0.1 is archived on Zenodo: https://doi.org/10.5281/zenodo.24294127. It differs from version 1.0.0 (https://doi.org/10.5281/zenodo.24293231) only in American English spelling and in figure sizes, which now fit the IJMS template text column; the analysis code, data and numerical results are unchanged. The DOI 10.5281/zenodo.24293230 always resolves to the latest version.
 
 The internal analysis plan and deviations log in `plan/` keep their original British spelling, because editing them would change their recorded SHA-256 hashes.
 
