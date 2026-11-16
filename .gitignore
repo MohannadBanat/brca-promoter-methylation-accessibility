@@ -1,0 +1,7 @@
+data/*
+!data/SHA256SUMS_*.txt
+!data/gdc_methylation_all74_manifest.tsv
+!data/cohort_74_atac.txt
+processed/
+__pycache__/
+.DS_Store
