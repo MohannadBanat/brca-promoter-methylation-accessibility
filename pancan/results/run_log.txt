@@ -1,0 +1,98 @@
+ACC 9 2253
+BLCA 10 1791
+/home/claude/pancan/scripts/P02_pancan_analysis.py:23: RuntimeWarning: divide by zero encountered in divide
+  return 1 - (e ** 2).sum(1) / ((y - y.mean(1, keepdims=True)) ** 2).sum(1)
+/home/claude/pancan/scripts/P02_pancan_analysis.py:23: RuntimeWarning: invalid value encountered in divide
+  return 1 - (e ** 2).sum(1) / ((y - y.mean(1, keepdims=True)) ** 2).sum(1)
+/home/claude/pancan/scripts/P02_pancan_analysis.py:41: RuntimeWarning: invalid value encountered in subtract
+  return {'D_median_A_minus_M': np.median(a - m), 'G_median_MA_minus_A': np.median(ma - a),
+/home/claude/pancan/scripts/P02_pancan_analysis.py:43: RuntimeWarning: invalid value encountered in subtract
+  'median_MA_minus_M': np.median(ma - m), 'frac_A_gt_M': np.mean(a > m)}
+CESC 2 472
+/home/claude/pancan/scripts/P02_pancan_analysis.py:59: RuntimeWarning: invalid value encountered in divide
+  return (rx * ry).sum(1) / np.sqrt((rx ** 2).sum(1) * (ry ** 2).sum(1))
+/home/claude/pancan/scripts/P02_pancan_analysis.py:23: RuntimeWarning: divide by zero encountered in divide
+  return 1 - (e ** 2).sum(1) / ((y - y.mean(1, keepdims=True)) ** 2).sum(1)
+/home/claude/pancan/scripts/P02_pancan_analysis.py:23: RuntimeWarning: invalid value encountered in divide
+  return 1 - (e ** 2).sum(1) / ((y - y.mean(1, keepdims=True)) ** 2).sum(1)
+/home/claude/pancan/scripts/P02_pancan_analysis.py:41: RuntimeWarning: invalid value encountered in subtract
+  return {'D_median_A_minus_M': np.median(a - m), 'G_median_MA_minus_A': np.median(ma - a),
+/home/claude/pancan/scripts/P02_pancan_analysis.py:43: RuntimeWarning: invalid value encountered in subtract
+  'median_MA_minus_M': np.median(ma - m), 'frac_A_gt_M': np.mean(a > m)}
+CHOL 2 1232
+COAD 23 2476
+ESCA 18 3027
+HNSC 8 2652
+KIRC 16 1536
+KIRP 33 3079
+LGG 10 1798
+LIHC 17 2693
+LUAD 21 2287
+LUSC 16 1880
+MESO 7 1153
+PCPG 9 1609
+PRAD 26 1632
+/home/claude/pancan/scripts/P02_pancan_analysis.py:23: RuntimeWarning: invalid value encountered in divide
+  return 1 - (e ** 2).sum(1) / ((y - y.mean(1, keepdims=True)) ** 2).sum(1)
+SKCM 4 1247
+STAD 21 3880
+TGCT 8 1597
+THCA 14 1083
+/home/claude/pancan/scripts/P02_pancan_analysis.py:23: RuntimeWarning: divide by zero encountered in divide
+  return 1 - (e ** 2).sum(1) / ((y - y.mean(1, keepdims=True)) ** 2).sum(1)
+/home/claude/pancan/scripts/P02_pancan_analysis.py:23: RuntimeWarning: invalid value encountered in divide
+  return 1 - (e ** 2).sum(1) / ((y - y.mean(1, keepdims=True)) ** 2).sum(1)
+/home/claude/pancan/scripts/P02_pancan_analysis.py:41: RuntimeWarning: invalid value encountered in subtract
+  return {'D_median_A_minus_M': np.median(a - m), 'G_median_MA_minus_A': np.median(ma - a),
+/home/claude/pancan/scripts/P02_pancan_analysis.py:43: RuntimeWarning: invalid value encountered in subtract
+  'median_MA_minus_M': np.median(ma - m), 'frac_A_gt_M': np.mean(a > m)}
+UCEC 2 1071
+{
+ "meta_types_included": [
+  "KIRP",
+  "PRAD",
+  "COAD",
+  "LUAD",
+  "STAD",
+  "ESCA",
+  "LIHC",
+  "LUSC",
+  "KIRC"
+ ],
+ "R1_pooled_D": {
+  "estimate": 0.12997687199249996,
+  "SE": 0.03930948322649531,
+  "CI95": [
+   0.05293028486856917,
+   0.20702345911643077
+  ],
+  "tau2": 0.011014237086012752,
+  "Q": 42.90927676027391,
+  "I2": 0.8135601295567273,
+  "k": 9
+ },
+ "R1_supported": true,
+ "R2_sign": {
+  "types_D_positive": 7,
+  "k": 9,
+  "one_sided_p": 0.08984375,
+  "criterion_met_8_of_9": false
+ },
+ "R3_pooled_G": {
+  "estimate": -0.04590543276925494,
+  "SE": 0.007179218725367981,
+  "CI95": [
+   -0.05997670147097618,
+   -0.0318341640675337
+  ],
+  "tau2": 0.00032682734053405047,
+  "Q": 43.79746345324713,
+  "I2": 0.8173410200218597,
+  "k": 9
+ },
+ "R3_supported": true
+}
+
+real	8m52.943s
+user	8m44.251s
+sys	0m3.419s
