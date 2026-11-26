@@ -12,7 +12,7 @@ rc = json.load(open(f'{R}/posthoc_review_corrections.json'))
 T9 = p['meta_types_included']; pt = p['per_type']
 NAME = {'KIRP': 'Kidney papillary', 'PRAD': 'Prostate', 'COAD': 'Colon', 'LUAD': 'Lung adenocarcinoma', 'STAD': 'Stomach',
         'ESCA': 'Esophagus', 'LIHC': 'Liver', 'LUSC': 'Lung squamous', 'KIRC': 'Kidney clear cell'}
-def n3(x): return f'{x:.3f}'.replace('-', '−')
+def n3(x): return f'{(0.0 if abs(x) < 0.0005 else x):.3f}'.replace('-', '−')
 def ci(e): return f"{n3(e['estimate'])} ({n3(e['CI95'][0])}, {n3(e['CI95'][1])})"
 
 # breast purity (descriptive)
