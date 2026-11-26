@@ -1,18 +1,27 @@
-# Promoter Chromatin Accessibility Outperforms Promoter DNA Methylation in Explaining Gene Expression in Primary Breast Tumors
+# Promoter DNA Methylation and Promoter Chromatin Accessibility as Explanations of Gene Expression in Primary Tumors (TCGA)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24293230.svg)](https://doi.org/10.5281/zenodo.24293230)
 
-Code, analysis plan and results for:
+Code, committed analysis plans and results for two linked analyses:
 
-> Abu Owida, H.; Alsarhan, A.; Banat, M.; Al-Fraihat, D.; Algarni, A. Promoter Chromatin Accessibility Outperforms Promoter DNA Methylation in Explaining Gene Expression in Primary Breast Tumors: An Integrative Multi-Omic Analysis of TCGA Data. Submitted to *International Journal of Molecular Sciences* (2026).
+1. **Breast discovery analysis** (repository root): 73 primary breast tumors; internal analysis plan committed on 16 November 2026.
+2. **Pan-cancer test** (`pancan/`, added in version 2.0.0): nine further cancer types (191 tumors) under a second plan committed on 25 November 2026, before any non-breast data were read. See [`pancan/README.md`](pancan/README.md).
+
+> Abu Owida, H.; Alsarhan, A.; Banat, M.; Al-Fraihat, D.; Algarni, A. Promoter DNA Methylation Adds Little to Promoter Chromatin Accessibility in Explaining Gene Expression Differences Between Tumors: A Pre-Specified Analysis of Ten Cancer Types. Submitted to *Cancers* (2026).
 
 **Study type:** secondary, observational, integrative multi-omic analysis of public TCGA data. No new samples were collected.
 
-## Archived version
+## Archived versions
 
-Version 1.0.1 is archived on Zenodo: https://doi.org/10.5281/zenodo.24294127. It differs from version 1.0.0 (https://doi.org/10.5281/zenodo.24293231) only in American English spelling and in figure sizes, which now fit the IJMS template text column; the analysis code, data and numerical results are unchanged. The DOI 10.5281/zenodo.24293230 always resolves to the latest version.
+| Version | Content | DOI |
+|---|---|---|
+| 2.0.0 | Adds the pan-cancer test (`pancan/`); fixes the RNA-seq download address in `scripts/00_download_data.sh` (the Xena S3 address now returns HTTP 403; the replacement serves byte-identical files) | this release (DOI on the Zenodo record; concept DOI below) |
+| 1.0.1 | Breast analysis; American English spelling, figure sizes for the IJMS template | https://doi.org/10.5281/zenodo.24294127 |
+| 1.0.0 | Breast analysis, first release | https://doi.org/10.5281/zenodo.24293231 |
 
-The internal analysis plan and deviations log in `plan/` keep their original British spelling, because editing them would change their recorded SHA-256 hashes.
+The breast code, data manifests and numerical results are unchanged since 1.0.0. The DOI 10.5281/zenodo.24293230 always resolves to the latest version. The analysis plans and deviations logs keep their original spelling, because editing them would change their recorded SHA-256 hashes.
+
+# Breast discovery analysis
 
 ## What the analysis does
 
@@ -81,7 +90,8 @@ The full results are in `results/results.json` and `results/H2_jackknife.json`.
 ## Repository layout
 
 ```
-scripts/   analysis code, in run order
+pancan/    pan-cancer test: plan, deviations log, scripts, results, figures, manuscript build (see pancan/README.md)
+scripts/   breast analysis code, in run order
 plan/      analysis plan, deviations log and their hashes
 results/   all numerical outputs
 figures/   Figures 1–3 (600 dpi PNG)
@@ -90,7 +100,7 @@ data/      download manifest, cohort list and checksums (raw data are not redist
 
 ## Use of generative AI
 
-Claude (Anthropic) was used to help design the analysis plan, write and run the code, and prepare the figures. The authors reviewed the analyses and take full responsibility for them.
+Claude (Anthropic) was used to help design both analysis plans, write and run the code, prepare the figures and draft the manuscripts. The authors reviewed the analyses and take full responsibility for them.
 
 ## Licence
 

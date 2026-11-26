@@ -1,18 +1,49 @@
 {
-  "title": "Promoter Chromatin Accessibility Outperforms Promoter DNA Methylation in Explaining Gene Expression in Primary Breast Tumors: An Integrative Multi-Omic Analysis of TCGA Data (code, analysis plan and results)",
+  "title": "Promoter DNA Methylation and Promoter Chromatin Accessibility as Explanations of Gene Expression in Primary Tumors: Breast Discovery Analysis and Pre-Specified Pan-Cancer Test in TCGA (code, analysis plans and results)",
   "upload_type": "software",
-  "version": "1.0.1",
-  "description": "Analysis code, internal analysis plan (committed 2026-11-16, SHA-256 b2b7079a364df1e80b5e9c5c0c46947204045ea7e401b5e1b1391ce3e8b48d2d), timed deviations log, numerical results and figures for a secondary, integrative multi-omic analysis of 73 TCGA primary breast tumors with matched ATAC-seq, DNA methylation and RNA-seq. The analysis compares promoter chromatin accessibility and promoter DNA methylation as explanations of cross-tumor gene expression. All input data are public and are downloaded by the included script; raw data are not redistributed.",
+  "version": "2.0.0",
+  "description": "Analysis code, two internal analysis plans with SHA-256 hashes, timed deviations logs, numerical results, figures and manuscript build code for a secondary, observational multi-omic analysis of TCGA primary tumors with matched ATAC-seq, DNA methylation and RNA-seq. Breast discovery analysis: 73 tumors, plan committed 2026-11-16 (SHA-256 b2b7079a364df1e80b5e9c5c0c46947204045ea7e401b5e1b1391ce3e8b48d2d). Pan-cancer test (added in 2.0.0): nine further cancer types, 191 tumors, plan committed 2026-11-25T00:03:36Z before any non-breast data were read (SHA-256 c440f092afb11f7e4afb9a7204ef51550ff12d0d88ad6f5c765527fbd542fa3b); two of three pre-specified criteria were met and one (consistency across types) was not. Version 2.0.0 also replaces the RNA-seq download address, which now returns HTTP 403, with one that serves byte-identical files. All input data are public and are downloaded by the included scripts; raw data are not redistributed.",
   "creators": [
-    {"name": "Abu Owida, Hamza", "affiliation": "Department of Medical Engineering, Faculty of Engineering, Al-Ahliyya Amman University, Amman 19328, Jordan", "orcid": "0000-0001-6943-6134"},
-    {"name": "Alsarhan, Ayoub", "affiliation": "Department of Information Technology, Faculty of Prince Al-Hussien bin Abdullah, The Hashemite University, Zarqa 13133, Jordan"},
-    {"name": "Banat, Mohannad", "affiliation": "Department of Medical Engineering, Faculty of Engineering, Al-Ahliyya Amman University, Amman 19328, Jordan"},
-    {"name": "Al-Fraihat, Dimah", "affiliation": "Department of Software Engineering, Faculty of Information Technology, Isra University, Amman 11622, Jordan"},
-    {"name": "Algarni, Abdulmohsen", "affiliation": "Department of Computer Science, King Khalid University, Abha 61421, Saudi Arabia"}
+    {
+      "name": "Abu Owida, Hamza",
+      "affiliation": "Department of Medical Engineering, Faculty of Engineering, Al-Ahliyya Amman University, Amman 19328, Jordan",
+      "orcid": "0000-0001-6943-6134"
+    },
+    {
+      "name": "Alsarhan, Ayoub",
+      "affiliation": "Department of Information Technology, Faculty of Prince Al-Hussein Bin Abdallah II for Information Technology, The Hashemite University, Zarqa 13133, Jordan"
+    },
+    {
+      "name": "Banat, Mohannad",
+      "affiliation": "Department of Medical Engineering, Faculty of Engineering, Al-Ahliyya Amman University, Amman 19328, Jordan"
+    },
+    {
+      "name": "Al-Fraihat, Dimah",
+      "affiliation": "Department of Software Engineering, Faculty of Information Technology, Isra University, Amman 11622, Jordan"
+    },
+    {
+      "name": "Algarni, Abdulmohsen",
+      "affiliation": "Department of Computer Science, King Khalid University, Abha 61421, Saudi Arabia"
+    }
   ],
   "license": "MIT",
-  "keywords": ["breast cancer", "DNA methylation", "chromatin accessibility", "ATAC-seq", "gene expression", "TCGA", "multi-omics"],
+  "keywords": [
+    "DNA methylation",
+    "chromatin accessibility",
+    "ATAC-seq",
+    "gene expression",
+    "pan-cancer",
+    "TCGA",
+    "multi-omics",
+    "meta-analysis",
+    "pre-registration",
+    "breast cancer"
+  ],
   "related_identifiers": [
-    {"identifier": "10.1126/science.aav1898", "relation": "isDerivedFrom", "scheme": "doi"}
+    {
+      "identifier": "10.1126/science.aav1898",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    }
   ]
 }

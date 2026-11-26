@@ -10,7 +10,9 @@ chunked(){ out=$1; url=$2; total=$3; step=20000000; mkdir -p ".parts_$out"; s=0;
     s=$((e+1)); i=$((i+1)); done
   cat ".parts_$out"/* > "$out" && rm -r ".parts_$out"; }
 GDC=https://api.gdc.cancer.gov/data
-XENA=https://tcga-xena-hub.s3.us-east-1.amazonaws.com/download
+# The Xena S3 address used for v1.0.x (tcga-xena-hub.s3.us-east-1.amazonaws.com) returned HTTP 403 from November 2026.
+# The hub address below serves byte-identical files (SHA-256 of HiSeqV2.gz, BRCA_clinicalMatrix and HumanMethylation450.gz checked against data/SHA256SUMS_downloads.txt on 2026-11-26).
+XENA=https://tcga.xenahubs.net/download
 # Corces et al. 2018 (GDC ATACseq-AWG publication page)
 chunked atac_typespecific_normcounts.zip $GDC/38b8f311-f3a4-4746-9829-b8e3edb9c157 632769396
 get atac_typespecific_peaks.zip   $GDC/71ccfc55-b428-4a04-bb5a-227f7f3bf91c
@@ -19,10 +21,10 @@ get DataS1_samples.xlsx           $GDC/148b8d1e-a132-48f6-8e40-9ca96aa2f9b2
 # TCGA PanCancer Atlas ABSOLUTE purity
 get ABSOLUTE_pancan_purity.txt    $GDC/4f277128-f793-4354-a13d-30cc7fe9f6b5
 # UCSC Xena TCGA BRCA hub: RNA-seq (RSEM log2) and clinical matrix (PAM50)
-get BRCA_HiSeqV2.gz               "$XENA/TCGA.BRCA.sampleMap%2FHiSeqV2.gz"
-get BRCA_clinicalMatrix.tsv       "$XENA/TCGA.BRCA.sampleMap%2FBRCA_clinicalMatrix"
+get BRCA_HiSeqV2.gz               "$XENA/TCGA.BRCA.sampleMap/HiSeqV2.gz"
+get BRCA_clinicalMatrix.tsv       "$XENA/TCGA.BRCA.sampleMap/BRCA_clinicalMatrix"
 # Legacy Xena HM450 matrix: used only by 00_feasibility_counts.py (sample identifiers), not by the analysis
-get BRCA_HumanMethylation450.gz   "$XENA/TCGA.BRCA.sampleMap%2FHumanMethylation450.gz"
+get BRCA_HumanMethylation450.gz   "$XENA/TCGA.BRCA.sampleMap/HumanMethylation450.gz"
 # Probe and gene annotation
 get HM450.hg38.manifest.gencode.v36.tsv.gz https://github.com/zhou-lab/InfiniumAnnotationV1/raw/main/Anno/HM450/HM450.hg38.manifest.gencode.v36.tsv.gz
 get HM27.hg38.manifest.gencode.v36.tsv.gz  https://github.com/zhou-lab/InfiniumAnnotationV1/raw/main/Anno/HM27/HM27.hg38.manifest.gencode.v36.tsv.gz

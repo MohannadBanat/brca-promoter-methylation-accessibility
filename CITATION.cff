@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the article and this software."
-title: "Promoter Chromatin Accessibility Outperforms Promoter DNA Methylation in Explaining Gene Expression in Primary Breast Tumors: code, analysis plan and results"
+title: "Promoter DNA methylation and promoter chromatin accessibility as explanations of gene expression in primary tumors: breast discovery analysis and pre-specified pan-cancer test (code, analysis plans and results)"
 license: MIT
-version: 1.0.1
-date-released: 2026-11-17
+version: 2.0.0
+date-released: 2026-11-26
 repository-code: "https://github.com/MohannadBanat/brca-promoter-methylation-accessibility"
 authors:
   - family-names: Abu Owida
