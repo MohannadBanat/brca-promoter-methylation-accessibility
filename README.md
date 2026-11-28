@@ -15,7 +15,7 @@ Code, committed analysis plans and results for two linked analyses:
 
 | Version | Content | DOI |
 |---|---|---|
-| 2.0.0 | Adds the pan-cancer test (`pancan/`); fixes the RNA-seq download address in `scripts/00_download_data.sh` (the Xena S3 address now returns HTTP 403; the replacement serves byte-identical files) | this release (DOI on the Zenodo record; concept DOI below) |
+| 2.0.0 | Adds the pan-cancer test (`pancan/`); fixes the RNA-seq download address in `scripts/00_download_data.sh` (the Xena S3 address now returns HTTP 403; the replacement serves byte-identical files) | https://doi.org/10.5281/zenodo.24627804 |
 | 1.0.1 | Breast analysis; American English spelling, figure sizes for the IJMS template | https://doi.org/10.5281/zenodo.24294127 |
 | 1.0.0 | Breast analysis, first release | https://doi.org/10.5281/zenodo.24293231 |
 

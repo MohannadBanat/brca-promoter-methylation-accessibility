@@ -2,7 +2,7 @@
 
 Code, plan and results for:
 
-> Abu Owida, H.; Alsarhan, A.; Banat, M.; Al-Fraihat, D.; Algarni, A. Promoter DNA Methylation Adds Little to Promoter Chromatin Accessibility in Explaining Gene Expression Differences Between Tumors: A Pre-Specified Analysis of Ten Cancer Types. Submitted to *Cancers* (2026).
+> Abu Owida, H.; Alsarhan, A.; Banat, M.; Al-Fraihat, D.; Algarni, A. Promoter DNA Methylation Adds Little to Promoter Chromatin Accessibility in Explaining Gene Expression Differences Between Tumors: A Pre-Specified Test in Nine Cancer Types. Submitted to *Cancers* (2026).
 
 **Study type:** secondary, observational analysis of public TCGA data. The breast analysis in the repository root is the discovery cohort; the nine other cancer types with at least 15 primary tumors with ATAC-seq, HM450 methylation and RNA-seq are the test.
 
